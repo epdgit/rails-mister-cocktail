@@ -1,16 +1,19 @@
-<h1>Cocktails list</h1>
+<h1 class="index-head mb-5 ml-3">Cocktails</h1>
 
 <ul>
     <% @cocktails.each do |cocktail| %>
-      <li class="list-group-item">
+      <li class="index">
         <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
       </li>
     <% end %>
 </ul>
 
 <%= link_to new_cocktail_path do %>
-  <i class="fas fa-cocktail" style="color: #4DB6AC"> Create a new cocktail!</i>
+  <h4 class="create-new ml-5">
+    <i class="fas fa-cocktail mt-3" style="color: #4DB6AC"> Create a new cocktail!</i>
+  </h4>
   <%#= link_to "Create a new cocktail!", new_cocktail_path, class:"btn btn-primary" %>
 <% end %>
 
 
+<%# <li class="list-group-item"> %>
