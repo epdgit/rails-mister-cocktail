@@ -1,6 +1,6 @@
-<h1>Define ingredient and dose?</h1>
+<h1 class="text-white">Define ingredient and dose?</h1>
 
-<p>Cocktail name: <%= link_to @cocktail.name, cocktail_path(@cocktail.id) %></p>
+<p class="text-white">Cocktail name: <%= link_to @cocktail.name, cocktail_path(@cocktail.id) %></p>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
 <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
