@@ -1,0 +1,15 @@
+<h1>Define ingredient and dose?</h1>
+
+<p>Cocktail name: <%= link_to @cocktail.name, cocktail_path(@cocktail.id) %></p>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+<%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+<%= f.input :description, label: "Describe the dose" %>
+<%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+
+<p>
+  <%= link_to cocktails_path do %>
+    <i class="fa fa-reply mt-5" aria-hidden="true">Back to list</i>
+  <% end %>
+</p>
