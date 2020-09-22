@@ -6,13 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-drinks = ["Mojito", "Bloody Mary", "Sex on the Beach", "Margarita", "Pina Colada"]
-drinks.each do |drink|
-  cocktail = Cocktail.new
-  cocktail.name = drink
-  cocktail.save!
-  puts cocktail.name
-end
+# drinks = ["Mojito", "Bloody Mary", "Sex on the Beach", "Margarita", "Pina Colada"]
+# drinks.each do |drink|
+#   cocktail = Cocktail.new
+#   cocktail.name = drink
+#   cocktail.save!
+#   puts cocktail.name
+# end
 
 
 
