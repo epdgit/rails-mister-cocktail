@@ -1,10 +1,12 @@
   <h2 class="ml-3 mb-3"><%= @cocktail.name %></h2>
 <div class="card-product">
-  <%= image_tag "soumyajit-dash-P_uV3I5QRJk-unsplash.jpg", alt: "#", width: 200 %>
   <ul>
     <% @cocktail.doses.each do |dose| %>
         <div >
           <li>
+              <% if cocktail.photo? %>
+                <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+              <% end %>
               <em><%= dose.ingredient.name %> -
               <%= dose.description %></em>
               <% if @cocktail.doses %>
